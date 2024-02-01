@@ -1,12 +1,6 @@
 .App {
   text-align: center;
   background-color: #282c34;
-  border: 5px solid;
-  margin: auto;
-  width: 292.5px;
-  height: 633px;
-  padding: 10px;
-  border-radius: 25px;
 }
 
 .App-logo {
@@ -43,20 +37,3 @@
     transform: rotate(360deg);
   }
 }
-
-/* PhoneFrame.css */
-
-.phone-frame {
-  position: relative;
-  width: 500px; /* Set the width of your "phone" */
-  height: 1055.56px; /* Set the height of your "phone" */
-  margin: 0 auto; /* Center the "phone" on the page */
-  border: 16px solid #333; /* Set the border color and width to resemble a phone frame */
-  border-radius: 36px; /* Adjust border-radius to round the corners */
-  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Add a subtle shadow to make it look like a physical object */
-  background: #fff; /* Set the background color inside the "phone" */
-}
-
-/* You can customize the styles further based on your design preferences */
-
-/* ZoohNavBar.css */
