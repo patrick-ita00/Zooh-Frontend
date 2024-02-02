@@ -19,7 +19,7 @@ function ZoohHeader() {
           <Navbar.Toggle />
           <Navbar.Collapse className="justify-content-end">
             <Navbar.Text>
-              Signed in as: <a href="#login">Patrick Pilotti</a>
+              Signed in as: <a href="/register">Not logged in</a>
             </Navbar.Text>
           </Navbar.Collapse>
         </Container>

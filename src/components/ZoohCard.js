@@ -7,11 +7,17 @@ function ZoohCard(props) {
     <Card style={{ width: '18rem', margin: '20px'}}>
       <Card.Img variant="top" src={props.image} />
       <Card.Body>
-        <Card.Title>Card Title</Card.Title>
-        <Card.Text>
-          {props.text}
-        </Card.Text>
-        <Button variant="primary">Go somewhere</Button >
+      <blockquote className="blockquote mb-0">
+          <p>
+            {' '}
+              {props.time}
+            {' '}
+          </p>
+          <footer className="blockquote-footer">
+            {props.desc}
+          </footer>
+        </blockquote>
+        <Button variant="primary">Add to favourites</Button >
       </Card.Body>
     </Card>
   );

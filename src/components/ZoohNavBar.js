@@ -5,18 +5,16 @@ function ZoohNavBar() {
     <>
       <Nav className="justify-content-center" activeKey="/home">
         <Nav.Item>
-          <Nav.Link href="/home">Active</Nav.Link>
+          <Nav.Link href="/events">Popular events</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-1">Link</Nav.Link>
+          <Nav.Link href="/animals">Animals</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="link-2">Link</Nav.Link>
+          <Nav.Link href="/staff">Staff</Nav.Link>
         </Nav.Item>
         <Nav.Item>
-          <Nav.Link eventKey="disabled" disabled>
-            Disabled
-          </Nav.Link>
+          <Nav.Link href="/about-us">About us</Nav.Link>
         </Nav.Item>
       </Nav>
     </>

@@ -2,7 +2,7 @@ import Nav from 'react-bootstrap/Nav';
 
 function ZoohFooter() {
   return (
-    <Nav variant="pills" defaultActiveKey="/home">
+    <Nav className="justify-content-center" variant="pills">
       <Nav.Item>
         <Nav.Link href="/home">Home</Nav.Link>
       </Nav.Item>
