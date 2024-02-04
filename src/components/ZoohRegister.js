@@ -1,10 +1,15 @@
-import React from 'react';
-import ZoohForm from './ZoohForm';
+// ZoohRegister.js
 
-const ZoohRegister = () => {
+import React, { useState } from 'react';
+import ZoohForm from './ZoohForm';
+import AlertSuccess from './AlertSuccess';
+
+const ZoohRegister = ({ onLogin }) => {
+  const [showSuccessMessage, setShowSuccessMessage] = useState(false);
+
   const handleRegister = async (formData) => {
     try {
-      const response = await fetch('localhost:8080/user/create', {
+      const response = await fetch('http://localhost:8080/user/create', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -14,6 +19,20 @@ const ZoohRegister = () => {
 
       if (response.ok) {
         console.log('User registered successfully');
+
+        // Assuming the response contains user data after registration
+        const userData = await response.json();
+
+        // Call the onLogin prop with user data
+        onLogin(userData);
+
+        // Set state to show success message
+        setShowSuccessMessage(true);
+
+        // Hide success message after 2 seconds
+        setTimeout(() => {
+          setShowSuccessMessage(false);
+        }, 2000);
       } else {
         console.error('Failed to register user');
       }
@@ -24,8 +43,13 @@ const ZoohRegister = () => {
 
   return (
     <div>
-      <h2>Register</h2>
-      <ZoohForm onRegister={handleRegister} />
+      <h2>Register User</h2>
+      <ZoohForm onRegister={handleRegister} onLogin={onLogin} />
+      
+      {/* Display success message using the AlertSuccess component */}
+      {showSuccessMessage && (
+        <AlertSuccess text="Registration successful!" />
+      )}
     </div>
   );
 };
